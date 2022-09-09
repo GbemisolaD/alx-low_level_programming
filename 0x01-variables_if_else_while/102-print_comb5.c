@@ -2,47 +2,32 @@
 #include <stdlib.h>
 /**
  * main - main block
- * Some description
+ *Description: Some description
+ *Return: 0
  */
 int main(void)
 {
-	int c;
-	int d;
-	int e;
-	int f = 0;
+	int n1, n2;
 
-	while (f < 10)
+	for (n1 = 0; n1 <= 98; n1++)
 	{
-		e = 0;
-		while (e < 10)
+		for (n2 = n1 + 1; n2 <= 99; n2++)
 		{
-			d = 0;
-			while (d < 10)
-			{
-				c = 0;
-				while (c < 10)
-				{
-					if (!(f == c && e == d))
-					{
-						putchar('0' + f);
-						putchar('0' + e);
-						putchar(' ');
-						putchar('0' + d);
-						putchar('0' + c);
-						if (!(f + e == 18 && c + d == 17 && d == 9))
-						{
-							putchar(',');
-							putchar(' ');
-						}
-					}
-					c++;
-				}
-				d++;
-			}
-			e++;
+			putchar((n1 / 10) + '0');
+			putchar((n1 % 10) + '0');
+			putchar(' ');
+			putchar((n2 / 10) + '0');
+			putchar((n2 % 10) + '0');
+
+			if (n1 == 98 && n2 == 99)
+				continue;
+
+			putchar(',');
+			putchar(' ');
 		}
-		f++;
 	}
 	putchar('\n');
+
 	return (0);
 }
+
