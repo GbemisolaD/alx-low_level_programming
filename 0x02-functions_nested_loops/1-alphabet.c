@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main header
- * Description: print_alphabet _ Entry point
+ * main - print_alphabet
+ * print_alphabet is a function that does something
  * Return: 0
  */
 
