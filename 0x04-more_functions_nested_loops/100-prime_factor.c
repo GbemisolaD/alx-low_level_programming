@@ -15,7 +15,7 @@ int main(void)
 	lower = 2;
 	test = 2;
 
-	while (max < test)
+	while (max > test)
 	{
 		if (max % test == 0)
 		{
