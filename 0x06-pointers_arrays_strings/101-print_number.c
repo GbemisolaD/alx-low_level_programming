@@ -1,36 +1,66 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * print_number - prints integer
- * @n: integer
+ * exponent - x to the power of y
+ * @x: base
+ * @y: exponent
+ * Description: calculates x^y
+ * Return: x^y
+ */
+
+int exponent(int x, int y)
+{
+	int power;
+
+	power = x;
+
+	if (x == 0)
+		return (0);
+	if (y == 0)
+		return (1);
+
+	while (y >= 2)
+	{
+		power = power * x;
+		y--;
+	}
+	return (power);
+}
+
+/**
+ * print_number - prints an integer
+ * @number: int to be printed
  * Return: void
  */
 
-void print_number(int n)
+void print_number(int number);
 {
-	unsigned int m, d, count;
+	int size, digit, counter, sign;
 
-	if (n < 0)
-	{
-		_putchar(45);
-		m = n * -1;
-	}
-	else
-	{
-		m = n;
-	}
+	sign = 1;
+	digit = 0;
+	size = 1;
+	counter = number;
 
-	d = m;
-	count = 1;
-
-	while (d > 9)
+	if (number < 0)
 	{
-		d /= 10;
-		count *= 10;
+		_putchar('-');
+		sign = -1;
 	}
 
-	for (; count >= 1; count /= 10)
+	for (; counter >= 10 || counter <= -10; size++)
 	{
-		_putchar(((m / count) % 10) + 48);
+		counter = counter / 10;
 	}
+	counter = number;
+
+	while (size >= 2)
+	{
+		digit = (counter / exponent(10, size - 1)) * sign;
+		_putchar(digit + '0');
+		counter = counter % exponent(10, size - 1);
+		size--;
+	}
+	_putchar(sign * counter % 10 + '0');
 }
