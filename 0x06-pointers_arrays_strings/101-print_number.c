@@ -34,7 +34,7 @@ int exponent(int x, int y)
  * Return: void
  */
 
-void print_number(int number);
+void print_number(int number)
 {
 	int size, digit, counter, sign;
 
