@@ -1,37 +1,33 @@
 #include "main.h"
-#include <stddef.h>
-#include <stdio.h>
 
 /**
- * upper - uppercase
- * @c: pointer to string
- * Return: pointer to string
+ * cap_string - uppercase
+ * @s: input string
+ * Return: pointer to dest
  */
 
-char *upper(char *c)
+char *cap_string(char *s)
 {
-	if (c[0] >= 'a' && c[0] <= 'z')
-		c[0] -= 32;
-	return (c);
-}
+	int count = 0, i;
+	int separators[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-/**
- * new_word - compares to char to char
- * @c: char to check
- * Return: 0 or 1
- */
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
 
-int new_word(char c)
-{
-	int i = 0;
-	char *word = "\t\n,;.!?\"(){}";
-
-	while (word[i] != '\0')
+	while (*(s + count) != '\0')
 	{
-		if (c == word[i])
-			return (1);
-		i++;
+		for (i = 0; i < 13; i++)
+		{
+			if (*(s + count) == separators[i])
+			{
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*(s + (count + 1)) = *(s + (count + 1)) - 32;
+				break;
+			}
+		}
+		count++;
 	}
 
-	return (0);
+	return (s);
 }
