@@ -9,20 +9,23 @@
 
 char *leet(char *c)
 {
-	int i, j;
-	char *replace;
+	int count = 0, i;
+	int lower_case[] = {97, 101, 111, 116, 108};
+	int upper_case[] = {65, 69, 79, 84, 76};
+	int numbers[] = {52, 51, 48, 55, 49};
 
-	replace = "aAeEoOtTlL4433007711";
-
-		for (i = 0; c[i] != '\0'; i++)
+	while (*(c + count) != '\0')
+	{
+		for (i = 0; i < 5; i++)
 		{
-			for (j = 0, j <= 9; j++)
+			if (*(c + count) == lower_case[i] || *(c + count) == upper_case[i])
 			{
-				if (c[i] == replace[j])
-					c[i] = replace[j + 10];
+				*(c + count) = numbers[i];
+				break;
 			}
-
 		}
+		count++;
+	}
 
-		return (c);
+	return (c);
 }
