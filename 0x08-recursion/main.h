@@ -12,5 +12,8 @@ int is_palindrome(char *s);
 int wildcmp(char *s1, char *s2);
 int _putchar(char c);
 int check_prime(int n, int resp);
+int check(char *s, int start, int end, int pair);
+int checker(char *s1, char *s2, int a, int b, int wildUsed);
+int last_index( char *s);
 
 #endif /*MAIN_H*/
