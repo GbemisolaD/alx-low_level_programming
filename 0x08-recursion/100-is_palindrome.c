@@ -1,49 +1,47 @@
 #include "main.h"
 
 /**
- * _strlen_recursion - size
+ * last_index - returns last index
  * @s: pointer
- * Return: recursion
+ * Return: int
  */
 
-int _strlen_recursion(char *s)
+int last_index(char *s)
 {
-	if (!*s)
-	{
-		return (0);
-	}
-	return (1 + _strlen_recursion(++s));
+	int n = 0;
+
+	if (*s > '\0')
+		n += last_index(s + 1) + 1;
+	return (n);
 }
 
 /**
- * p1 - palindrome
- * @s: pointer
- * @l: positn
- * Return: boolean
- */
-
-int p1(char *s, int l)
-{
-	if (l < 1)
-	{
-		return (1);
-	}
-	if (*s == *(s + 1))
-	{
-		return (p1(s + 1, l - 2));
-	}
-	return (0);
-}
-
-/**
- * is_palindrome - pali
- * @s: pointer
- * Return: recursion
+ * is_palindrome - checks
+ * @s: string
+ * Return: 0 or 1
  */
 
 int is_palindrome(char *s)
 {
-	int len = _strlen_recursion(s);
+	int end = last_index(s);
 
-	return (p1(s, len - 1));
+	return (check(s, 0, end - 1, end % 2));
+}
+/**
+ * check - checkr
+ * @s: strinf
+ * @start: int
+ * @end: int
+ * @pair: int
+ * Return: 0 or 1
+ */
+
+int check(char *s, int start, int end, int pair)
+{
+	if ((start == end && pair != 0) || (start == end + 1 && pair == 0))
+		return (1);
+	else if (s[start] != s[end])
+		return (0);
+	else
+		return (check(s, start + 1, end - 1, pair));
 }
