@@ -1,0 +1,251 @@
+!<arch>
+0-isupper.c/    0           0     0     644     98        `
+#include "main.h"
+
+/**int _isupper - function
+ * @c: int
+ * Return: 0
+ */
+
+int _isupper(int c){
+}
+0-memset.c/     0           0     0     644     151       `
+#include "main.h"
+
+/**
+ * _memset - function
+ * @s: char
+ * @b: char
+ * @n: int
+ * Return: char
+ */
+
+char *_memset(char *s, char b, unsigned int n){
+}
+
+0-strcat.c/     0           0     0     644     133       `
+#include "main.h"
+/**
+ * _strcat - function
+ * @dest: char
+ * @src: char
+ * Return: no
+ */
+
+char *_strcat(char *dest, char *src)
+{
+}
+
+1-isdigit.c/    0           0     0     644     94        `
+#include "main.h"
+/**_isdigit - function
+ * @c: int
+ * Return: 0
+ */
+
+int _isdigit(int c)
+{
+}
+1-memcpy.c/     0           0     0     644     162       `
+#include "main.h"
+/**
+ * _memcpy - function
+ * @dest: char
+ * @src: char
+ * @n: int
+ * Return: char
+ */
+
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+}
+1-strncat.c/    0           0     0     644     155       `
+#include "main.h"
+/**
+ * _strncat - function
+ * @dest: char
+ * @src: char
+ * @n: int
+ * Return: char
+ */
+
+char *_strncat(char *dest, char *src, int n)
+{
+}
+
+100-atoi.c/     0           0     0     644     97        `
+#include "main.h"
+/**
+ * _atoi - function
+ * @s: char
+ * Return: int
+ */
+
+int _atoi(char *s)
+{
+}
+
+2-strchr.c/     0           0     0     644     124       `
+#include "main.h"
+/**
+ * _strchr - function
+ * @s: char
+ * @c: char
+ * Return: char
+ */
+
+char *_strchr(char *s, char c)
+{
+}
+2-strlen.c/     0           0     0     644     101       `
+#include "main.h"
+/**
+ * _strlen - function
+ * @s: char
+ * Return: int
+ */
+
+int _strlen(char *s)
+{
+}
+
+2-strncpy.c/    0           0     0     644     155       `
+#include "main.h"
+/**
+ * _strncpy - function
+ * @dest: char
+ * @src: char
+ * @n: int
+ * Return: char
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+}
+
+3-islower.c/    0           0     0     644     100       `
+#include "main.h"
+/**
+ * _islower - function
+ * @c: int
+ * Return: int
+ */
+
+int _islower(int c)
+{
+}
+3-puts.c/       0           0     0     644     99        `
+#include "main.h"
+/**
+ * _puts - function
+ * @s: char
+ * Return: void
+ */
+
+void _puts(char *s)
+{
+}
+
+3-strcmp.c/     0           0     0     644     125       `
+#include "main.h"
+/**
+ * _strcmp - function
+ * @s1: char
+ * @s2: char
+ * Return: int
+ */
+int _strcmp(char *s1, char *s2)
+{
+}
+
+3-strspn.c/     0           0     0     644     143       `
+#include "main.h"
+/**
+ * _strspn - function
+ * @s: char
+ * @accept: char
+ * Return: int
+ */
+
+unsigned int _strspn(char *s, char *accept)
+{
+}
+
+
+
+4-isalpha.c/    0           0     0     644     101       `
+#include "main.h"
+
+/**
+ * _isalpha - function
+ * @c: int
+ * Return: int
+ */
+
+int _isalpha(int c)
+{
+}
+
+4-strpbrk.c/    0           0     0     644     137       `
+#include "main.h"
+/**
+ * _strpbrk - function
+ * @s: char
+ * @accept: char
+ * Return: char
+ */
+
+char *_strpbrk(char *s, char *accept)
+{
+}
+
+5-strstr.c/     0           0     0     644     149       `
+#include "main.h"
+/**
+ * _strstr - function
+ * @haystack: char
+ * @needle: char
+ * Return: char
+ */
+
+char *_strstr(char *haystack, char *needle)
+{
+}
+
+6-abs.c/        0           0     0     644     93        `
+#include "main.h"
+
+/**
+ * _abs - function
+ * @n: int
+ * Return: int
+ */
+
+int _abs(int n)
+{
+}
+
+9-strcpy.c/     0           0     0     644     136       `
+#include "main.h"
+
+/**
+ * _strcpy - function
+ * @dest: char
+ * @src: char
+ * Return: char
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+}
+_putchar.c/     0           0     0     644     102       `
+#include "main.h"
+/**
+ * _putchar - function
+ * @c: char
+ * Return: int
+ */
+
+int _putchar(char c)
+{
+}
