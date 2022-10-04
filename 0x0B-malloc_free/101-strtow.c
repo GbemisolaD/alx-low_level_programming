@@ -68,6 +68,6 @@ char **strtow(char *str)
 		else if (c++ == 0)
 			start = i;
 	}
-	matric[k] = NULL;
+	matrix[k] = NULL;
 	return (matrix);
 }
