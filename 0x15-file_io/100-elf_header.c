@@ -54,6 +54,11 @@ void print_magic(unsigned char *e_ident)
 
 void print_class(unsigned char *e_ident)
 {
-	printf("  Class:
+	printf("  Class:             ");
 
-			switch
+	switch (e_ident[EI_CLASS])
+	{
+		case ELFCLASSNONE :
+			printf("none\n");
+			break;
+
